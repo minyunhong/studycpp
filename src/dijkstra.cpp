@@ -1,10 +1,7 @@
 #include <dijkstra.hpp>
-using namespace std;
 
 #define INF 0x3f3f3f3f
 #define MAX 20001
-#define DEBUG 1
-using namespace std;
 
 #if DEBUG
 int v = 5, e = 8, start = 5;
@@ -17,9 +14,6 @@ array<array<int, 3>, 8>  arr = { { {5, 2, 4},	// {from, to, cost},
 							 	   {1, 3, 6},
 							 	   {3, 4, 2}
 								} };
-#else
-int v, e, start;
-int from, to, cost;
 #endif
 vector<pair<int, int>> graph[MAX];
 
@@ -58,13 +52,18 @@ vector<int> dijkstra(int start, int vertex)
 
 void dijkstra_main()
 {
-
 #if DEBUG
 	for (int i = 0; i < e; i++)
     {
         graph[arr[i][0]].push_back({arr[i][1], arr[i][2]});
  	}
+    for(int i=0; i<e; i++)
+        for(int j=0; j<graph[i].size(); j++)
+            cout << i << ": " << graph[i][j].first << ", " << graph[i][j].second << endl;
 #else
+    int from, to, cost;
+    int v, e, start;
+
     cin >> v >> e >> start;
     for (int i = 0; i < e; i++)
     {
@@ -79,9 +78,12 @@ void dijkstra_main()
 
     for (int i = 1; i < v + 1; i++)
     {
-        if (result[i] == INF) {
+        if (result[i] == INF)
+        {
             cout << "INF" << '\n';
-        } else {
+        }
+        else
+        {
             cout << result[i] << '\n';
         }
     }

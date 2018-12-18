@@ -1,5 +1,5 @@
-#ifndef DIJKSTRA
-#define DIJKSTRA
+#ifndef DIJKSTRA_HPP
+#define DIJKSTRA_HPP
 
 #include "main.hpp"
 #include <array>

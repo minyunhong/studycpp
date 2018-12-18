@@ -14,6 +14,8 @@ set(BIN_NAME hongStudyCpp)
 set(SRC_LIST
     ${CMAKE_SOURCE_DIR}/src/main.cpp
     ${CMAKE_SOURCE_DIR}/src/dijkstra.cpp
+    ${CMAKE_SOURCE_DIR}/src/1719_delivery.cpp
+    ${CMAKE_SOURCE_DIR}/src/11399_atm.cpp
 )
 
 #include files

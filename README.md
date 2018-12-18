@@ -1,2 +1,0 @@
-# studycpp
-study cpp
