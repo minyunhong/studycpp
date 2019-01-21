@@ -4,15 +4,16 @@
 #include <iostream>
 using namespace std;
 
-#define DEBUG 0
+#define DEBUG 1
 
 class Main {
 public:
-	unsigned int input;
 	void print_menu();
 	virtual void input_value();
-	virtual void test_print() {}
-	void test();
+	virtual void execute_menu();
+	//virtual void test_print() {}
+
+	unsigned int input;
 };
 
 #endif

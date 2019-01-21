@@ -1,5 +1,7 @@
 #include <main.hpp>
 #include <dijkstra.hpp>
+#include <greedy.hpp>
+#include <dp.hpp>
 #include <1719_delivery.hpp>
 #include <11399_atm.hpp>
 
@@ -8,7 +10,8 @@ void Main::print_menu()
 	cout << endl << "=== main menu ===" << endl;
 	cout << "1. dijkstra" << endl;
 	cout << "2. delivery" << endl;
-	cout << "3. atm" << endl;
+	cout << "3. greedy" << endl;
+	cout << "4. dynamic programming" << endl;
 	cout << "ff. exit" << endl;
 }
 
@@ -17,20 +20,14 @@ void Main::input_value()
 	cin >> hex >> input;
 }
 
-void Main::test()
+void Main::execute_menu()
 {
-	//Delivery d = new Delivery();
-}
-
-int main()
-{
-	Main m;
-
-	while(1)
+	while (1)
 	{
-		m.print_menu();
-		m.input_value();
-		switch(m.input)
+		print_menu();
+		input_value();
+
+		switch (input)
 		{
 			case 0x1:
 				dijkstra_main();
@@ -41,16 +38,26 @@ int main()
 				break;
 
 			case 0x3:
-				atm_main();
+				greedy_main();
+				break;
+
+			case 0x4:
+				dp_main();
 				break;
 
 			default:
 				break;
 		}
 
-		if( m.input == 0xff )
+		if (input == 0xff)
 			break;
 	}
+}
 
+int main()
+{
+	Main m;
+
+	m.execute_menu();
 	return 0;
 }
