@@ -1,7 +1,7 @@
 #ifndef GREEDY_HPP
 #define GREEDY_HPP
 
-#include <main.hpp>
+#include "main.hpp"
 
 class greedy : public Main
 {

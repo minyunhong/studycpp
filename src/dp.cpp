@@ -1,10 +1,12 @@
 #include <dp.hpp>
 #include <1003_fibonacci.hpp>
+#include <9095_numberCombi.hpp>
 
 void dp::print_menu()
 {
 	cout << endl << "=== dp menu ===" << endl;
 	cout << "1. fibonacci" << endl;
+	cout << "2. number combination" << endl;
 	cout << "ff. exit" << endl;
 }
 
@@ -19,6 +21,10 @@ void dp::execute_menu()
 		{
 			case 0x1:
 				fibonacci_main();
+				break;
+
+			case 0x2:
+				numberCombi_main();
 				break;
 
 			default:

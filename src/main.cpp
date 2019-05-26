@@ -1,9 +1,10 @@
-#include <main.hpp>
-#include <dijkstra.hpp>
-#include <greedy.hpp>
-#include <dp.hpp>
-#include <1719_delivery.hpp>
-#include <11399_atm.hpp>
+#include "main.hpp"
+#include "cpp_main.hpp"
+#include "dijkstra.hpp"
+#include "greedy.hpp"
+#include "dp.hpp"
+#include "1719_delivery.hpp"
+#include "11399_atm.hpp"
 
 void Main::print_menu()
 {
@@ -12,6 +13,7 @@ void Main::print_menu()
 	cout << "2. delivery" << endl;
 	cout << "3. greedy" << endl;
 	cout << "4. dynamic programming" << endl;
+	cout << "5. cpp study" << endl;
 	cout << "ff. exit" << endl;
 }
 
@@ -43,6 +45,10 @@ void Main::execute_menu()
 
 			case 0x4:
 				dp_main();
+				break;
+
+			case 0x5:
+				cpp_main();
 				break;
 
 			default:

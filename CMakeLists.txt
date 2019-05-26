@@ -13,6 +13,8 @@ set(BIN_NAME hongStudyCpp)
 #source list
 set(SRC_LIST
     ${CMAKE_SOURCE_DIR}/src/main.cpp
+    ${CMAKE_SOURCE_DIR}/src/cpp_main.cpp
+    ${CMAKE_SOURCE_DIR}/src/thiscall.cpp
     ${CMAKE_SOURCE_DIR}/src/dijkstra.cpp
     ${CMAKE_SOURCE_DIR}/src/greedy.cpp
     ${CMAKE_SOURCE_DIR}/src/dp.cpp
@@ -20,6 +22,7 @@ set(SRC_LIST
     ${CMAKE_SOURCE_DIR}/src/11399_atm.cpp
     ${CMAKE_SOURCE_DIR}/src/11047_coin.cpp
     ${CMAKE_SOURCE_DIR}/src/1003_fibonacci.cpp
+    ${CMAKE_SOURCE_DIR}/src/9095_numberCombi.cpp
 )
 
 #include files
